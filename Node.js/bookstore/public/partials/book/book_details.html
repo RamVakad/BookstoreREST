@@ -1,0 +1,25 @@
+<div class="jumbotron" style="backgroung-color: #00FFFF">
+  <div class="container">
+    <div class="col-xs-4">
+      <img ng-src="{{ BOOK.imgUrl }}" alt="Description" />
+    </div>
+    <div class="col-xs-8">
+      <h1>{{BOOK.title}}</h1>
+      <h2>{{BOOK.author}} </h2>
+      <h4>Genre: {{BOOK.genre}}</h4>
+      <p>{{BOOK.description}} </p>
+      <h5>Pages: {{ BOOK.pages }} </h5>
+      <a href="{{BOOK.buyUrl}}" target="_blank"> Buy @ Barnes&Noble </a>
+    </div>
+
+    <div class="btn-group-horizontal pull-right">
+      <button type="button" class="btn btn-default btn-sm" ng-click="updateBook();">
+       Edit
+      </button>
+      <button type="button" class="btn btn-default btn-sm" ng-click="deleteBook();">
+        <i class="fa fa-trash-o fa-lg"></i> &nbsp; Delete
+      </button>
+    </div>
+
+  </div>
+</div>

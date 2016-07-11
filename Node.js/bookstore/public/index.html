@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html ng-app="bookstore">
+
+<head>
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="/css/def.css" />
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css" />
+</head>
+
+<!-- define angular controller -->
+<body>
+  <div class="container">
+      <nav class="navbar navbar-default">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="/"><i class="fa fa-home"></i> Bookstore</a>
+          </div>
+
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#/books/add"><i class="fa fa-shield"></i> Add Book</a></li>
+            <li><a href="#/genres/manage"><i class="fa fa-star"></i> Manage Genres</a></li>
+          </ul>
+      </nav>
+
+      <div ng-view></div>
+
+  </div>
+</body>
+
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-filter/0.5.8/angular-filter.min.js"></script>
+<script src="//code.jquery.com/jquery.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script src="index.js"></script>
+<script src="/js/services/BookService.js"></script>
+<script src="/js/services/GenreService.js"></script>
+<script src="/js/controllers/homeController.js"></script>
+<script src="/js/controllers/detailController.js"></script>
+<script src="/js/controllers/addController.js"></script>
+<script src="/js/controllers/editController.js"></script>
+<script src="/js/controllers/genreController.js"></script>
+<script src="/js/directives/bookDirectives.js"></script>
+</html>

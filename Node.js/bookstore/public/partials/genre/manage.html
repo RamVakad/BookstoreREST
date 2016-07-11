@@ -1,0 +1,27 @@
+<div class="jumbotron" style="backgroung-color: #00FFFF">
+  <h1 class="text-center">Manage Genres</h1>
+  <div class="container">
+    <div class="col-xs-6 col-centered">
+      <table st-table="rowCollection" class="table table-striped">
+            <tbody>
+              <tr ng-repeat="genre in GENRES">
+                <td>{{genre.name}}</td>
+                <td>
+                  <div class="btn-group-horizontal pull-right">
+                    <button type="button" class="btn btn-default btn-sm" ng-click="delete(genre);">
+                     <i class="fa fa-times" aria-hidden="true"></i>
+                    </button>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+      </table>
+      <input type="text" class="form-control" ng-model="addTitle"/>
+      <div class="margin-top-05">
+        <button type="button" class="btn btn-primary btn-block" ng-click="add();">
+          Add
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,13 @@
+<div class="jumbotron" style="backgroung-color: #00FFFF">
+  <h1 class="text-center">Welcome to Ram's Bookstore!</h1>
+</div>
+
+
+<!-- Start showing rows of books. -->
+<div class="row" ng-repeat="bChunk in BOOKS | chunkBy:2">
+    <div class="col-xs-6" ng-repeat="book in bChunk">
+      <a href="{{ '#/books/' + book._id}}">
+        <book-small-grid book="book"></book-small-grid>
+      </a>
+    </div>
+</div>

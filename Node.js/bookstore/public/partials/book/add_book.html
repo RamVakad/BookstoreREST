@@ -1,0 +1,38 @@
+<div class="jumbotron" style="backgroung-color: #00FFFF">
+  <div class="container">
+    <div class="col-xs-4">
+      <img ng-src="{{ BOOK.img_url }}" />
+    </div>
+    <div class="col-xs-8">
+      <a href="http://www.barnesandnoble.com/" target="_blank">Click Here</a> & find a book to add to the database.
+      <form>
+        <fieldset class="form-group">
+          <input type="text" class="form-control" ng-model="BOOK.title" placeholder="Enter book title" />
+        </fieldset>
+        <fieldset class="form-group">
+          <input type="text" class="form-control" ng-model="BOOK.author" placeholder="Enter name of author" />
+        </fieldset>
+        <fieldset class="form-group">
+          <div ng-repeat="genre in GENRES">
+            <input type="radio" ng-model="BOOK.genre" value="{{genre.name}}" />
+            {{genre.name}}
+          </div>
+        </fieldset>
+        <fieldset class="form-group">
+          <textarea class="form-control" ng-model="BOOK.description" rows="3" placeholder="Enter description, don't make it too long."></textarea>
+        </fieldset>
+        <fieldset class="form-group">
+          <input class="form-control" ng-model="BOOK.imgUrl" rows="3" placeholder="Enter image url" />
+        </fieldset>
+        <fieldset class="form-group">
+          <input class="form-control" ng-model="BOOK.buyUrl" rows="3" placeholder="Enter buy url" />
+        </fieldset>
+        <fieldset class="form-group">
+          <input class="form-control" ng-model="BOOK.pages" rows="3" placeholder="Enter number of pages" />
+        </fieldset>
+      </form>
+      <button type="button" class="btn btn-primary btn-block" ng-click="addBook();">Add</button>
+    </div>
+
+  </div>
+</div>
